@@ -1,0 +1,336 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container px-4 px-lg-0">
+
+    <aside class="row gx-4 gx-lg-5 align-items-center my-4 cta-card">
+        <div class="col-lg-6">
+            <iframe class="rounded" width="100%" height="315"
+                src="https://www.youtube.com/embed/jHEPQpSKdbg?si=aFM5ROnEF68ZIKEm" title="Budgets at MIT"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="col-lg-5 mt-3">
+            <h1 class="font-weight-light text-left">BudgetBuddy Today</h1>
+            <p class="text-justify"><strong>Master Your Finances:</strong> Discover the power of budget planners in
+                transforming your
+                financial journey. Efficiently track income, manage expenses, and achieve your savings goals – all in
+                one place. Embrace the clarity and control you need for a financially secure future.</p>
+            <a class="btn-readmore" href="#" target="_blank" aria-label="send to Academy page">Know
+                More About Budgeting</a>
+        </div>
+    </aside>
+
+    <!-- Call to Action-->
+    {% comment %} Testimonial Section {% endcomment %}
+    <div id="testimonialCarousel" class="carousel slide vertical" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <aside class="card text-white quote my-4 py-2 text-center bg-main">
+                    <div class="card-body">
+                        <p class="text-white m-0 testimonial">"A budget is telling your money where to go instead of wondering where it
+                            went."—Dave Ramsey</p
+                    </div>
+                </aside>
+                {% comment %} <div class="testimonial">Testimonial 1 Content</div> {% endcomment %}
+            </div>
+            <div class="carousel-item">
+                {% comment %} <div class="testimonial">Testimonial 2 Content</div> {% endcomment %}
+                <aside class="card text-white quote my-4 py-2 text-center bg-main">
+                    <div class="card-body">
+                        <p class="text-white m-0 testimonial">"Thanks to BudgetBuddy, I achieved my financial goals quicker than I ever thought possible!."—John David</p
+                    </div>
+                </aside>
+            </div>
+            <div class="carousel-item">
+                {% comment %} <div class="testimonial">Testimonial 3 Content</div> {% endcomment %}
+                <aside class="card text-white quote my-4 py-2 text-center bg-main">
+                    <div class="card-body">
+                        <p class="text-white m-0 testimonial">"BudgetBuddy is a game-changer: simple, powerful, and perfect for managing my expenses and savings!."—Clementina Regorer</p
+                    </div>
+                </aside>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+
+    <!-- Demo Row-->
+    <article class="row gx-4 gx-lg-5 mt-5">
+        <h1 class="fairplay-font text-center mb-5">Demo</h1>
+
+        <!-- INCOMES -->
+        <div class="col-lg-4 col-md-12 mb-5 col-sm-12">
+            <div class="card shadow h-100">
+                <!-- Card Header -->
+                <header>
+                    <h2 class="card-header text-center">INCOMES</h2>
+                </header>
+
+                <!-- Card Thumbnail -->
+                <a href="" class="row bg-thumbnail d-block">
+                    <div class="col-12 bg-thumbnail-image"
+                        style="background-image: url('https://placehold.co/600x400/EEE/31343C')">
+                    </div>
+                </a>
+                <!-- Card Body -->
+                <!-- Total -->
+                <section class="card-body pt-1 px-2 pb-1 border">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="p-1">
+
+                                <div class="d-flex justify-content-between">
+                                    <h3 class="p-0 m-0">Total Income</h3>
+                                    <h3 class="p-0 m-0">$600</h3>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Entries -->
+                <section class="card-body pt-1 px-2 pb-1">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            
+                            <div class="data-row">
+                                <p>TransferWise LTD<span>sofortTransfer</span></p>
+                                <p class="badge-money">+500$</p>
+                        
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section class="card-body pt-1 px-2 pb-1">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="data-row">
+                                <p>TransferWise LTD<span>sofortTransfer</span></p>
+                                <p class="badge-money">+500$</p>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="card-body pt-1 px-2 pb-1">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="data-row">
+                                <p>TransferWise LTD<span>sofortTransfer</span></p>
+                                <p class="badge-money">+500$</p>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Card Footer -->
+                <footer>
+                    <a class="card-footer text-center fs-5 btn w-100" href="#">
+                        DETAILS
+                    </a>
+                </footer>
+            </div>
+        </div>
+
+        <!-- EXPENDITURES -->
+        <div class="col-lg-4 col-md-12 mb-5 col-sm-12">
+            <div class="card shadow h-100">
+                <!-- Card Header -->
+                <header>
+                    <h2 class="card-header text-center">EXPENDITURES</h2>
+                </header>
+
+                <!-- Card Thumbnail -->
+                <a href="" class="row bg-thumbnail d-block">
+                    <div class="col-12 bg-thumbnail-image"
+                        style="background-image: url('https://placehold.co/600x400/EEE/31343C')">
+                    </div>
+                </a>
+
+                <!-- Card Body -->
+                <!-- Total -->
+                <section class="card-body pt-1 px-2 pb-1 border">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="p-1">
+
+                                <div class="d-flex justify-content-between">
+                                    <h3 class="p-0 m-0">Total Expenses</h3>
+                                    <h3 class="p-0 m-0">-$100</h3>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Entries -->
+                <section class="card-body pt-1 px-2 pb-1">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="data-row">
+                                <p>TransferWise LTD<span>sofortTransfer</span></p>
+                                <p class="badge-money text-danger">-500$</p>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="card-body pt-1 px-2 pb-1">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="data-row">
+                                <p>TransferWise LTD<span>sofortTransfer</span></p>
+                                <p class="badge-money text-danger">-500$</p>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="card-body pt-1 px-2 pb-1">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="data-row">
+                                <p>TransferWise LTD<span>sofortTransfer</span></p>
+                                <p class="badge-money text-danger">-500$</p>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Card Footer -->
+                <footer>
+                    <a class="card-footer text-center fs-5 btn w-100" href="#">
+                        DETAILS
+                    </a>
+                </footer>
+            </div>
+        </div>
+
+        <!-- GOALS -->
+        <div class="col-lg-4 col-md-12 mb-5 col-sm-12">
+            <div class="card shadow h-100">
+                <!-- Card Header -->
+                <header>
+                    <h2 class="card-header text-center">GOALS</h2>
+                </header>
+
+                <!-- Card Thumbnail -->
+                <a href="" class="row bg-thumbnail d-block">
+                    <div class="col-12 bg-thumbnail-image"
+                        style="background-image: url('https://placehold.co/600x400/EEE/31343C')">
+                    </div>
+                </a>
+
+                <!-- Card Body -->
+                <!-- Total -->
+                <section class="card-body pt-1 px-2 pb-1 border">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="p-1">
+
+                                <div class="d-flex justify-content-between">
+                                    <h3 class="p-0 m-0">Current Balance</h3>
+                                    <h3 class="p-0 m-0">$500</h3>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weekly Goal -->
+                <section class="card-body pt-1 px-2 pb-1 border">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="p-1">
+
+                                <div class="data-row">
+                                    <p>Weekly Goal</p>
+                                    <p class="d-flex justify-content-center align-items-center" >
+                                        <span class="fw-bold pe-2">500$</span> 
+                                        <span class="circle d-inline-block"></span>
+                                    </p>
+                            
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Monthly Goal -->
+                <section class="card-body pt-1 px-2 pb-1 border">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="p-1">
+
+                                <div class="data-row">
+                                    <p>monthly Goal</p>
+                                    <p class="d-flex justify-content-center align-items-center" >
+                                        <span class="fw-bold pe-2">500$</span> 
+                                        <span class="half-circle d-inline-block"></span>
+                                    </p>
+                            
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Yearly Goal -->
+                <section class="card-body pt-1 px-2 pb-1 border">
+                    <div class="row">
+                        <div class="col-12 d-inline-block">
+                            <div class="p-1">
+
+                                <div class="data-row">
+                                    <p>monthly Goal</p>
+                                    <p class="d-flex justify-content-center align-items-center" >
+                                        <span class="fw-bold pe-2">500$</span> 
+                                        <span class="empty-circle  d-inline-block"></span>
+                                    </p>
+                            
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Card Footer -->
+                <footer>
+                    <a class="card-footer text-center fs-5 btn w-100" href="#">
+                        DETAILS
+                    </a>
+                </footer>
+            </div>
+        </div>
+
+        <!-- CTA to Learn More -->
+
+        <div class="col-12 text-center mb-3">
+            <a href="#" class="btn btn-primary w-auto see-more fs-5">Learn More</a>
+        </div>
+    </article>
+
+</div>
+{% endblock %}
