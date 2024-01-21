@@ -1,4 +1,4 @@
-#!/workspace/budgetbuds/env/bin/python3
+#!/workspace/budgetbuds/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

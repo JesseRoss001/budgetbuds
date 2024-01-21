@@ -1,4 +1,4 @@
-#!/workspace/budgetbuds/env/bin/python3
+#!/workspace/budgetbuds/env/bin/python
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
