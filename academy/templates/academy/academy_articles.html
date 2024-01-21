@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="py-5 bg-light team1">
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-7 text-center">
+                <h3 class="mb-3">The Power of Education</h3>
+                <h6 class="subtitle font-weight-normal">"If you think education is expensive, try ignorance." -
+                    Attributed to Derek Bok/Andy McIntyre</h6>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Article  -->
+            {% for item in news_items %}
+            <article class="col-lg-4 mb-4 d-flex">
+                <div class="card card-shadow border-0 flex-fill">
+
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <p class="text-center m-0 p-0">
+                            <a href="{{ item.link }}" class="text-decoration-none text-white" target="_blank"
+                                rel="noopener noreferrer"><strong>{{ item.domain_name }}</strong></a>
+                        </p>
+                    </div>
+
+                    <div class="row no-gutters h-100">
+                        <!-- Card Body -->
+                        <div class="card-body col-md-12 bg-white d-flex flex-column">
+                            <div class="p-4 flex-fill">
+                                <h6 class="mb-3 font-weight-medium">
+                                    <a href="{{ item.link }}" class="text-decoration-none" target="_blank"
+                                        rel="noopener noreferrer">{{ item.title }}</a>
+                                </h6>
+                                <p class="">{{ item.summary }}</p>
+                                <p class="m-0 p-0"><small>{{ item.published }}</small></p>
+                            </div>
+                            <!-- Icons -->
+                            <div class="mt-auto">
+                                <ul class="list-unstyled d-flex justify-content-center align-items-center p-0 m-0">
+                                    <li class="px-2">
+                                        <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer"><i
+                                                class="fa-solid fa-link"></i></a>
+                                    </li>
+                                    <li class="px-2">
+                                        <a href="{{ item.base }}" target="_blank" rel="noopener noreferrer"><i
+                                                class="fa-solid fa-rss"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer iframe-preview" data-bs-toggle="modal" data-bs-target="#rssInstance"
+                        data-attributedomain="{{ item.domain_name }}" data-attributelink="{{ item.link }}">
+                        <p class=" text-center m-0 p-0"><strong>Preview</strong></p>
+                    </div>
+                </div>
+            </article>
+
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <section class="mt-5">
+            <!-- NEXT -->
+            {% if page_obj.has_next %}
+            <div class="d-flex justify-content-center align-items-center">
+
+                <ul class="pagination">
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-primary">NEXT</a></li>
+                </ul>
+
+                <div class="current text-center mx-3">
+                    <p>{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</p>
+                </div>
+
+                <ul class="pagination">
+                    <li><a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-primary">LAST</a></li>
+                </ul>
+            </div>
+
+            {% endif %}
+
+            <!-- PREVIOUS -->
+            {% if page_obj.has_previous %}
+            <div class="d-flex justify-content-center align-items-center">
+
+                <ul class="pagination">
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-primary">PREV</a>
+                    </li>
+                </ul>
+
+                <div class="current text-center mx-3">
+                    <p>{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</p>
+                </div>
+
+                <ul class="pagination">
+                    <li><a href="?page=1" class="btn btn-primary">FIRST</a></li>
+                </ul>
+            </div>
+            {% endif %}
+        </section>
+
+    </div>
+</div>
+
+<!-- Instance Modal -->
+<div class="modal fade" id="rssInstance" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <section class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+                <span class="fs-5" id="sourceName"></span>
+                <span class="modal-title fs-5" id="popupModalLabel"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Body -->
+            <iframe height="400" id="iframeUrl" class="modal-body">
+
+            </iframe>
+        </section>
+    </div>
+</div>
+{% endblock %}
